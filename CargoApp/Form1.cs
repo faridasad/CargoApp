@@ -27,6 +27,7 @@ namespace CargoApp
         private void button1_Click(object sender, EventArgs e)
         {
             PriceHandler calculatePrice = new PriceHandler();
+
             calculatePrice.Width = (float)widthInput.Value;
             calculatePrice.Height = (float)heightInput.Value;
             calculatePrice.Weight = (float)weightInput.Value;
@@ -35,7 +36,9 @@ namespace CargoApp
             calculatePrice.Country = (string)dropDown.SelectedItem;
             calculatePrice.Type = (string)cargoTypes.SelectedItem;
             float totalPrice = calculatePrice.Calculate();
-            totalText.Text = $"TOTAL: {Math.Round(totalPrice, 2)}$";
+
+            totalText.ForeColor = Color.FromArgb(50, 205, 50);
+            totalText.Text = $"{Math.Round(totalPrice, 2)}$";
         }
     }
 }
