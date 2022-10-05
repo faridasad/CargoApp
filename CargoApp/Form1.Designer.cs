@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dropDown = new System.Windows.Forms.ComboBox();
             this.weightInput = new System.Windows.Forms.NumericUpDown();
             this.lengthInput = new System.Windows.Forms.NumericUpDown();
@@ -284,8 +285,10 @@
             this.Controls.Add(this.lengthInput);
             this.Controls.Add(this.weightInput);
             this.Controls.Add(this.dropDown);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TısbağaEX";
             ((System.ComponentModel.ISupportInitialize)(this.weightInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lengthInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthInput)).EndInit();
